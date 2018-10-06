@@ -1,0 +1,11 @@
+create table offer ( 
+	offer_id INT(100) PRIMARY KEY, 
+	dt_create TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
+	dt_modify TIMESTAMP DEFAULT CURRENT_TIMESTAMP on UPDATE CURRENT_TIMESTAMP, 
+	action_by INT(100), offer_name VARCHAR(255), 
+	offer_img_link VARCHAR(255), 
+	is_active INT(10) DEFAULT 1 
+);
+ALTER TABLE `offer` CHANGE `offer_id` `offer_id` INT(100) NOT NULL AUTO_INCREMENT;
+
+INSERT INTO `offer` (`offer_id`, `dt_create`, `dt_modify`, `action_by`, `offer_name`, `offer_img_link`, `is_active`) VALUES (NULL, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP, '1', 'offer-1', 'www.google.com', '1');
