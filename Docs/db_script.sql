@@ -30,3 +30,7 @@ create table posts (
 	post_body VARCHAR(255),
 	is_active int(10) DEFAULT 1
 );
+
+
+select * from offer;
+update offer set is_active =1 where is_active=0;
