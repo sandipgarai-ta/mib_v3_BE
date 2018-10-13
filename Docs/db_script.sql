@@ -34,3 +34,5 @@ create table posts (
 
 select * from offer;
 update offer set is_active =1 where is_active=0;
+
+select * from posts;

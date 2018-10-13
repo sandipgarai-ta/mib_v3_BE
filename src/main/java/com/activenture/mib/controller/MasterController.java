@@ -32,7 +32,7 @@ public class MasterController {
 	
 	@PostMapping("/savepost")
 	public Posts savePost(@RequestBody Posts post){
-		return post;
+		return postDao.savePost(post);
 	}
 	
 	@GetMapping("/fetchmasterdata")
