@@ -1,5 +1,5 @@
 package com.activenture.mib.entity;
-// Generated Oct 18, 2018 10:31:45 AM by Hibernate Tools 5.2.3.Final
+// Generated Oct 18, 2018 12:50:28 PM by Hibernate Tools 5.2.3.Final
 
 import java.util.Date;
 import javax.persistence.Column;
@@ -18,21 +18,22 @@ import javax.persistence.TemporalType;
 @Table(name = "subscribed_user", catalog = "activent_mib_dev")
 public class SubscribedUser implements java.io.Serializable {
 
-	private Integer subscribeId;
+	private long subscribeId;
 	private Date dtCreate;
 	private Date dtModify;
 	private String userEmail;
-	private Integer isActive;
+	private int isActive=1;
 
 	public SubscribedUser() {
 	}
 
-	public SubscribedUser(Date dtCreate, Date dtModify) {
+	public SubscribedUser(Date dtCreate, Date dtModify, int isActive) {
 		this.dtCreate = dtCreate;
 		this.dtModify = dtModify;
+		this.isActive = isActive;
 	}
 
-	public SubscribedUser(Date dtCreate, Date dtModify, String userEmail, Integer isActive) {
+	public SubscribedUser(Date dtCreate, Date dtModify, String userEmail, int isActive) {
 		this.dtCreate = dtCreate;
 		this.dtModify = dtModify;
 		this.userEmail = userEmail;
@@ -43,11 +44,11 @@ public class SubscribedUser implements java.io.Serializable {
 	@GeneratedValue(strategy = IDENTITY)
 
 	@Column(name = "subscribe_id", unique = true, nullable = false)
-	public Integer getSubscribeId() {
+	public long getSubscribeId() {
 		return this.subscribeId;
 	}
 
-	public void setSubscribeId(Integer subscribeId) {
+	public void setSubscribeId(long subscribeId) {
 		this.subscribeId = subscribeId;
 	}
 
@@ -80,12 +81,12 @@ public class SubscribedUser implements java.io.Serializable {
 		this.userEmail = userEmail;
 	}
 
-	@Column(name = "is_active")
-	public Integer getIsActive() {
+	@Column(name = "is_active", nullable = false)
+	public int getIsActive() {
 		return this.isActive;
 	}
 
-	public void setIsActive(Integer isActive) {
+	public void setIsActive(int isActive) {
 		this.isActive = isActive;
 	}
 
