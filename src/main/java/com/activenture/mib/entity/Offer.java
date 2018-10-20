@@ -21,8 +21,13 @@ public class Offer implements java.io.Serializable {
 	private Long offerId;
 	private Date dtCreate;
 	private Date dtModify;
+	private Date dtValidity;
 	private Integer actionBy;
 	private String offerName;
+	private String offerDetails;
+	
+	
+
 	private String offerImgLink;
 	private Integer isActive;
 
@@ -75,6 +80,16 @@ public class Offer implements java.io.Serializable {
 	public void setDtModify(Date dtModify) {
 		this.dtModify = dtModify;
 	}
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@Column(name = "dt_validity", nullable = false, length = 19)
+	public Date getDtValidity() {
+		return this.dtValidity;
+	}
+
+	public void setDtValidity(Date dtValidity) {
+		this.dtValidity = dtValidity;
+	}
 
 	@Column(name = "action_by")
 	public Integer getActionBy() {
@@ -93,10 +108,19 @@ public class Offer implements java.io.Serializable {
 	public void setOfferName(String offerName) {
 		this.offerName = offerName;
 	}
+	
+	@Column(name = "offer_details")
+	public String getOfferDetails() {
+		return offerDetails;
+	}
+
+	public void setOfferDetails(String offerDetails) {
+		this.offerDetails = offerDetails;
+	}
 
 	@Column(name = "offer_img_link")
 	public String getOfferImgLink() {
-		return this.offerImgLink;
+		return "http://www.activenture.in/DOCS/mib_v3/"+this.offerImgLink;
 	}
 
 	public void setOfferImgLink(String offerImgLink) {
