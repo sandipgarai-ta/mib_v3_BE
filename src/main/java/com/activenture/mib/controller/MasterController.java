@@ -45,12 +45,12 @@ public class MasterController {
 	@GetMapping("/fetchmasterdata")
 	public MasterResponse getMasterData(){
 		//MailClient mailClient=new MailClient();
-		try {
+		/*try {
 			mailClient.preparedAndSendMail("sandip.garai013@gmail.com", "Test Mail From MIB-BE");
 		} catch (MessagingException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}
+		}*/
 		MasterResponse masterRes=new MasterResponse();
 		masterRes.setOfferList(offerDao.getAllActiveOffer());
 		masterRes.setPostList(postDao.getAllActivePosts());
