@@ -4,7 +4,7 @@
 <hibernate-reverse-engineering>
 	<type-mapping>
         <sql-type jdbc-type="BIGINT" hibernate-type="long"/>
-        <sql-type jdbc-type="INTEGER" hibernate-type="int"/>
+        <sql-type jdbc-type="INTEGER" hibernate-type="long"/>
     </type-mapping>
-  	<table-filter match-catalog="activent_mib_dev" match-name="subscribed_user"/>
+  	<table-filter match-catalog="activent_mib_dev" match-name="quick_apply"/>
 </hibernate-reverse-engineering>
