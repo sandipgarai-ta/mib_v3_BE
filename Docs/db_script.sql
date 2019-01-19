@@ -41,3 +41,16 @@ select * from offer;
 update offer set is_active =1 where is_active=0;
 
 select * from posts;
+
+
+
+
+create table application (
+	id int(100) PRIMARY KEY auto_increment,
+	dt_application TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	user_id INT(100),
+	amount VARCHAR(255),
+	type_id INT(100),
+	city VARCHAR(255)
+);
+ALTER TABLE `application` CHANGE `type_id` `product_id` INT(100) NULL DEFAULT NULL;

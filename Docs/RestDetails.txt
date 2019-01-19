@@ -1,0 +1,30 @@
+
+
+#################################################################################
+URL=http://localhost:9001/api/application/save-application
+
+Req=
+{
+	"userId":11,
+	"amount":"1000",
+	"city":"Kolkata",
+	"productId":174
+}
+
+
+Response=
+{
+    "staus": 0,
+    "msg": null,
+    "data": [
+        {
+            "id": 1,
+            "dtApplication": null,
+            "userId": 11,
+            "amount": "1000",
+            "city": "Kolkata",
+            "productId": 174
+        }
+    ]
+}
+#####################################################################################
